@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {BreadcrumItem} from './breadcrum-item';
 import { AuthService } from 'src/app/services/auth/auth.service';
+import { DataService } from 'src/app/services/data/data.service';
+import { Folder } from 'src/app/models/folder.model';
 
 @Component({
   selector: 'app-breadcrum',
@@ -9,11 +11,11 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 })
 export class BreadcrumComponent implements OnInit {
 
-  constructor(public auth:AuthService) { }
+  constructor(public auth:AuthService,public data:DataService) { }
 
   @Input()
   items:Array<BreadcrumItem> = new Array<BreadcrumItem>();
-
+  folder:Array<Folder> = new Array<Folder>();
   @Output()
   clickItem: EventEmitter<BreadcrumItem> = new EventEmitter<BreadcrumItem>();
 

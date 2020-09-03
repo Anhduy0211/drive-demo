@@ -7,7 +7,7 @@ import { BreadcrumItem } from '../breadcrum/breadcrum-item';
 import { CreateFolderDialogComponent } from '../dialog/create-folder-dialog/create-folder-dialog.component';
 import {MatDialog} from '@angular/material/dialog';
 import { NewFolderComponent } from '../new-folder/new-folder.component';
-import { UploadComponent } from '../uploader/uploader.component';
+import { UploaderComponent } from '../uploader/uploader.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -62,7 +62,7 @@ export class SidebarComponent implements OnInit {
   }
 
   openUploadDialog(){
-    const dialogRef = this.dialog.open(UploadComponent);
+    const dialogRef = this.dialog.open(UploaderComponent);
   }
 
   // public findItem(id:string):Iicon{

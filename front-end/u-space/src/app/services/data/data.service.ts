@@ -16,6 +16,9 @@ export class DataService {
     },
     {
       name: 'Work',
+    },
+    {
+      name:'Hello'
     }
   ];
 

@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "u-space"
+  "defaultProject": "u-space",
+  "cli": {
+    "analytics": "23013885-ccca-48d0-aadc-3c93bdd61132"
+  }
 }

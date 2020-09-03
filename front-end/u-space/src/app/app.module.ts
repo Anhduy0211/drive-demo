@@ -34,15 +34,18 @@ import { FileFormatComponent } from './components/file-format/file-format.compon
 import {MatExpansionModule} from '@angular/material/expansion';
 import { BreadcrumComponent } from './components/breadcrum/breadcrum.component';
 import { FileActionDialogComponent } from './components/file-action-dialog/file-action-dialog.component';
-import {UploadComponent} from '../app/components/uploader/uploader.component'
+import {UploaderComponent} from '../app/components/uploader/uploader.component'
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { CreateFolderDialogComponent } from './components/dialog/create-folder-dialog/create-folder-dialog.component';
 // import {NavUIModule} from '../app/modules/nav-ui/nav-ui.module'
 import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FolderFormatComponent } from './components/folder-format/folder-format.component';
-
-
+import { UploadTaskComponent } from './components/upload-task/upload-task.component';
+import {DropzoneDirective } from './dropzone.directive';
+import{AngularFireStorageModule} from '@angular/fire/storage'
+import { AngularFirestore } from '@angular/fire/firestore';
+import { NavUIModule } from './modules/nav-ui/nav-ui.module';
 
 
 
@@ -50,6 +53,7 @@ import { FolderFormatComponent } from './components/folder-format/folder-format.
 @NgModule({
   declarations: [
     AppComponent,
+    DropzoneDirective,
     BySOComponent,
     RenderTestComponent,
     // ListShareComponent,
@@ -58,11 +62,13 @@ import { FolderFormatComponent } from './components/folder-format/folder-format.
     // ListShareComponent,
     NewFolderComponent,
     FileActionDialogComponent,
-    UploadComponent,
+    UploaderComponent,
     // FileFormatComponent,
 
     FolderFormatComponent,
+    UploadTaskComponent,
 
+    
 
   ],
   imports:[
@@ -71,13 +77,13 @@ import { FolderFormatComponent } from './components/folder-format/folder-format.
     BrowserAnimationsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
     AngularFireModule,
     AngularFireAuthModule,
     MatSidenavModule,
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
-    BrowserAnimationsModule,
     MatIconModule,
     MatListModule,
     MatCardModule,
@@ -91,10 +97,10 @@ import { FolderFormatComponent } from './components/folder-format/folder-format.
     FormsModule,
     MatExpansionModule,
     MatProgressBarModule,
-
     MatGridListModule,
+    NavUIModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

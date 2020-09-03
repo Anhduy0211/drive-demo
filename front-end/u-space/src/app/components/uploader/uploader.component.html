@@ -1,14 +1,18 @@
-<h1 mat-dialog-title>
-    Upload Progressive
-</h1>
-<div mat-dialog-content>
-    <p>{{data.fileName}}</p>
-    <mat-progress-bar *ngIf="!data.status.isCompleted" mode="determinate" [value]="data.status.message">
-    </mat-progress-bar>
-    <p *ngIf="!data.status.isCompleted">{{data.status.message}}%</p>
-    <p *ngIf="data.status.isCompleted">
-        {{data.status.message}}
-    </p>
+<upload-task></upload-task>
+<div class="row">
+    <div class="col-sm-3">
+        <h1>Drop down files here</h1>
+        <div class="dropzone" dropzone (hovered)="toggleHover($event)" (dropped)="onDrop($event)" [class.hovering]="isHovering">
+
+            <h3>AngularFire Drop Zone</h3>
+            <p>Drag and Drop a File</p>
+        </div>
+    </div>
+    <div class="col-sm-6">
+
+    </div>
 </div>
-<div mat-dialog-actions>
+<h3>Uploads</h3>
+<div *ngFor="let file of files">
+    <upload-task [file]="file"></upload-task>
 </div>

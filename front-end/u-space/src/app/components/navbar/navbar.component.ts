@@ -22,7 +22,6 @@ export class NavbarComponent implements OnInit {
   }
 
   changeInputColor(color:string){
-    console.log("dasdasd")
     this.inputBackgroundFlip = {
       'background':color
     }
