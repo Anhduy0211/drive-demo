@@ -17,7 +17,7 @@ router.post('/',async (req,resp)=>{
     const {uploadDir} = req.body
 
 
-    for (let fileKey of Object.keys(req.files)) {
+    for (let fileKey of Object.keys(req.files)) { 
         let file = <expressFileupload.UploadedFile>req.files[fileKey];
         // let hashName = uuid();
         //ts-ignore
