@@ -48,6 +48,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { NavUIModule } from './modules/nav-ui/nav-ui.module';
 
 
+import { AngularBreadcrumbsLightModule } from 'angular-breadcrumbs-light';
 
 
 @NgModule({
@@ -98,7 +99,9 @@ import { NavUIModule } from './modules/nav-ui/nav-ui.module';
     MatExpansionModule,
     MatProgressBarModule,
     MatGridListModule,
-    NavUIModule
+    NavUIModule,
+
+    AngularBreadcrumbsLightModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

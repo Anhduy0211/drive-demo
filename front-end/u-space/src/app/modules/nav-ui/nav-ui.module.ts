@@ -21,6 +21,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {NavbarComponent} from '../../components/navbar/navbar.component'
 import { CreateFolderDialogComponent } from 'src/app/components/dialog/create-folder-dialog/create-folder-dialog.component';
 
+import { Routes, RouterModule } from '@angular/router';
 @NgModule({
   declarations: [SidebarComponent,BreadcrumComponent,NavbarComponent,CreateFolderDialogComponent],
   imports: [
@@ -51,7 +52,7 @@ import { CreateFolderDialogComponent } from 'src/app/components/dialog/create-fo
     FormsModule,
     MatExpansionModule,
     MatProgressBarModule,
-    
+    RouterModule
 
   ],
   exports:[

@@ -8,7 +8,7 @@
     min-width: 80vw;
     font-weight: 200;
     height: 300px;
-    border: 2px dashed #f16624;
+    border: 2px solid lightblue;
     border-radius: 5px;
     background: white;
     margin: 10px 0;
@@ -30,7 +30,7 @@ progress::-webkit-progress-value {
 .row {
     width: 100%;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 10%;
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
